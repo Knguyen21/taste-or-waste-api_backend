@@ -1,3 +1,3 @@
 class FoodSerializer < ActiveModel::Serializer
-  attributes :id, :name, :description, :purchased_date, :expiration_date, :remind_date, :storage, :disposal
+  attributes :id, :category, :storage, :disposal, :name, :description, :purchased_date, :expiration_date, :remind_date, :user
 end
