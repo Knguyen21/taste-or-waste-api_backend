@@ -1,2 +1,2 @@
 curl --include --request GET http://localhost:3000/foods \
-  --header "Authorization: Token token=BAhJIiVmZGJlOTgxZGZkNTcwMmQxYzYyYWFkMDdlMTRlNDUzZgY6BkVG--15a7569edafead3820bced4092c63d0953b888b8"
+  --header "Authorization: Token token=BAhJIiU5ZGQxNDEwZDcwYThmYTgwMTUxNTg5NjQ1MWYzMjg4ZQY6BkVG--db08b1ee30405b1e3df903ce2a76319071bb2d09"
