@@ -1,4 +1,4 @@
 #
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :email, :storages, :disposals
+  attributes :id, :email, :foods
 end
