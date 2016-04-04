@@ -1,4 +1,4 @@
-<% project_name = 'fridge-api' %>
+<% project_name = 'taste-or-waste-api' %>
 
 default: &default
   adapter: postgresql
