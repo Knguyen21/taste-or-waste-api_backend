@@ -1,10 +1,10 @@
-class FoodsController < OpenReadController
+class FoodsController < ProtectedController
   before_action :set_food, only: [:show, :update, :destroy]
 
   # GET /foods
   # GET /foods.json
   def index
-    @foods = Food.all
+    @foods = current_user.foods
 
     render json: @foods
   end
@@ -18,7 +18,7 @@ class FoodsController < OpenReadController
   # POST /foods
   # POST /foods.json
   def create
-    @food = Food.new(food_params)
+    @food = current_user.foods.new(food_params)
 
     if @food.save
       render json: @food, status: :created, location: @food
@@ -30,7 +30,7 @@ class FoodsController < OpenReadController
   # PATCH/PUT /foods/1
   # PATCH/PUT /foods/1.json
   def update
-    @food = Food.find(params[:id])
+    @food = current_user.foods.find(params[:id])
 
     if @food.update(food_params)
       head :no_content
@@ -50,10 +50,10 @@ class FoodsController < OpenReadController
   private
 
     def set_food
-      @food = Food.find(params[:id])
+      @food = current_user.foods.find(params[:id])
     end
 
     def food_params
-      params.require(:food).permit(:name, :description, :purchased_date, :expiration_date, :remind_date)
+      params.require(:food).permit(:storage, :disposal, :category, :name, :description, :purchased_date, :expiration_date, :remind_date, :user, :user_id)
     end
 end

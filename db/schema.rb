@@ -26,17 +26,17 @@ ActiveRecord::Schema.define(version: 20160404133713) do
   add_index "examples", ["user_id"], name: "index_examples_on_user_id", using: :btree
 
   create_table "foods", force: :cascade do |t|
-    t.string   "storage"
-    t.string   "disposal"
-    t.string   "name"
-    t.text     "description"
-    t.date     "purchased_date"
-    t.date     "expiration_date"
-    t.date     "remind_date"
+    t.string   "storage",
+    t.string   "disposal",
+    t.string   "name",
+    t.text     "description",
+    t.date     "purchased_date",
+    t.date     "expiration_date",
+    t.date     "remind_date",
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
-    t.integer  "user_id"
-    t.string   "category"
+    t.integer  "user_id",
+    t.string   "category",
   end
 
   add_index "foods", ["user_id"], name: "index_foods_on_user_id", using: :btree
